@@ -1,0 +1,121 @@
+
+/* =====================================
+   BUDGET AND EXPENSE FORMS
+===================================== */
+
+.budget-action,
+.expense-section {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.budget-action h2,
+.expense-section h2 {
+    font-size: 19px;
+    margin-bottom: 18px;
+}
+
+#budget-form,
+#expense-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+#budget-form input,
+#expense-form input,
+#expense-form select {
+    flex: 1;
+    min-width: 150px;
+    padding: 13px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--background-color);
+    color: var(--primary-text);
+    font-size: 14px;
+}
+
+#budget-form button,
+#expense-form button {
+    background: var(--brand-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 13px 20px;
+    cursor: pointer;
+    transition: 200ms ease;
+}
+
+#budget-form button:hover,
+#expense-form button:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
+/* =====================================
+   EXPENSE RECORDS
+===================================== */
+
+.expense-records {
+    display: flex;
+    flex-direction: column;
+}
+
+.expense-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.expense-details small {
+    color: var(--secondary-text);
+}
+
+/* =====================================
+   BUDGET FEEDBACK
+===================================== */
+
+.budget-feedback {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.budget-feedback.success {
+    background: #e3f8ef;
+    color: #167b54;
+}
+
+.budget-feedback.warning {
+    background: #fff3d6;
+    color: #946200;
+}
+
+.budget-feedback.danger {
+    background: #ffe5e8;
+    color: #bd3346;
+}
+
+/* =====================================
+   RESPONSIVE FORMS
+===================================== */
+
+@media (max-width: 767px) {
+
+    #budget-form,
+    #expense-form {
+        flex-direction: column;
+    }
+
+    #budget-form input,
+    #expense-form input,
+    #expense-form select,
+    #budget-form button,
+    #expense-form button {
+        width: 100%;
+    }
+}
